@@ -1,1 +1,1 @@
-This is this repository that stores my blog programs.
+This is the repository that stores my blog programs.
