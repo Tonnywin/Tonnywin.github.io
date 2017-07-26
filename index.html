@@ -25,8 +25,8 @@
     
     
     
-        <link rel="dns-prefetch" href="https://s95.cnzz.com"/>
     
+        <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
     
     
     
@@ -269,9 +269,7 @@
     <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
 
     <!-- Analytics -->
-    <div style="display: none;">
-    <script src="//s95.cnzz.com/z_stat.php?id=1263079052&web_id=1263079052" language="JavaScript"></script>
-</div>
+    
 
     <!-- Custom Head -->
     
@@ -380,6 +378,15 @@
             <span class="visuallyhidden">show menu</span>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
+            
+                <!-- All Site UV -->
+                <a class="index_share-link" href="#">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        <span id="busuanzi_container_site_uv">
+                            <span id="busuanzi_value_site_uv"></span>&nbsp;浏览量
+                        </span>
+                    </li>
+                </a>
             
 
             
@@ -930,6 +937,9 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
