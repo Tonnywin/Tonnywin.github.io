@@ -3,39 +3,37 @@
   
     
     <entry>
-      <title><![CDATA[newday]]></title>
-      <url>/2017/07/23/newday/</url>
-      <content type="html"></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title></title>
-      <url>/2017/07/23/firstblog/</url>
-      <content type="html"><![CDATA[<hr>
-<h2 id="firstblog"><a href="#firstblog" class="headerlink" title="firstblog"></a>firstblog</h2><p>date: 2017-07-23 16:04:21</p>
-<hr>
-<p>想说什么呢，我已经无话可说</p>
+      <title><![CDATA[致自己的信]]></title>
+      <url>/2017/08/11/%E5%86%99%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1/</url>
+      <content type="html"><![CDATA[<p>&ensp;&ensp;弄了这么久，终于把自己的个人网站搭建好了。说实话，并没有太多的惊喜，因为我明白这只是所有一切的开端。但终归还是得说一句，终于可以有自己的一片空间能记述我的一切心情，想法，以及发现，我也终于在程序员这条路上开始越走越远，一发不可收拾~</p>
+<p>&ensp;&ensp;一路过来，其实受到了太多的非议和质疑，我也有过很多次的怀疑自己。但也在这个过程中发现自己的心境变得越来越阔达，真的很感谢我的爸妈，一直很担心我的以后，却没有过度的指责我的坚持。人生路还很漫长，即使没有人肯定你，你依然需要坚持，这既是对自己的肯定，也是回应周围人最好的方式。我至始至终相信，一个始终努力的人，一个有想法的人是不会辜负时光的。与其在害怕与迷茫中徘徊，不如潇洒的朝自己想要的生活走去，毕竟我们还年轻，毕竟我们还有激情满满的动力还有一个健康的身体。而现在，这个个人网站就是对我这几个月的付出最好的证明，也是我坚信自己以后不管遇到什么，我都会坦然地，坚毅地走下去~</p>
+<p>&ensp;&ensp;关于感想也不再多说了，谈谈以后的规划吧，这个才是真正让我牵挂和兴奋的地方。做这个网站我的初衷就是记录自己，分享自己，见证自己，刚开始做的时候，并没有想太多，只是单纯的想做个网站，把自己学到的技术应用一遍，巩固一遍。到后来发现。个人博客是一个很有魅力的东西，它可以完完全全的展示自己，也可以和不同的人进行交流，最重要的是它就像一个秘密的小岛，你可以完全放松自己，把自己的所有东西都放在这里。而且它还可以和我一起不断地成长。这么好的东西，该怎么用呢？又有什么打算呢？以下就是我的一些规划：</p>
+<ul>
+<li><p>今年内，对个人博客网站进行第二版本的更新，用vue以及webpack进行开发，以及对数据库，php进行深入学习，增添一些互动的板块功能，管理员登陆操作相关功能，可以的话做个简单的文件上传功能。</p>
+</li>
+<li><p>今后的前端学习技术总结，统一分享到我的博客中。</p>
+</li>
+<li><p>多写日记，记录生活，总结生活。把生活的点点滴滴充实起来，变得美好，温暖。</p>
+</li>
+<li><p>博客坚持至少每周一更，坚持才能有收获。 </p>
+</li>
+</ul>
+<p>&ensp;&ensp;暂时想到这么多，就写这么多吧。这第一篇博客更多的是我自己对自己的一个期盼。以前的我一直很闷骚，有了这么个平台，得要好好耕耘，努力把它变成一个越来越丰富的世界。我相信，若干年后我回头看，它一定是帮助我成长的一个工具，也是见证我成长的一双眼睛。</p>
+<p>&ensp;&ensp;生命不息，奋斗不止<del>~</del></p>
 ]]></content>
       
+        <categories>
+            
+            <category> 生活 </category>
+            
+        </categories>
         
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>/2017/07/23/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-      
+        
+        <tags>
+            
+            <tag> life </tag>
+            
+        </tags>
         
     </entry>
     
