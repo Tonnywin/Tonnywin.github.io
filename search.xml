@@ -23,7 +23,7 @@
 <pre><code>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {...}
 </code></pre><p>考虑到像Blackberry黑莓手机已经快要消失匿迹了，你也可以直接删了。当然，我仍然留有一部黑莓手机，所以也就不忍心了。至于<code>touchstart</code>、<code>touchmove</code>、<code>touchend</code>的使用也就大同小异了，在这里总结也只是着重说明PC端与移动端的拖拽事件的不一样。</p>
 <p><span style="color:red">第五个问题,外链的使用问题。</span>按道理来说外链的使用是没有问题的，就是使用<code>a标签</code>一调用就行了，可是现实并不总是这么美好。在调用别人家的图片时由于相当于你偷人家的资源，于是就有了<strong>防盗链</strong>这一说。这让一直认为世界是无私美好的我瞬间涨姿势了！对于一些图标啥的我也是直接挂在图片外链网站，也没有想过用人家的外链。但是在休闲栏我用的是别人的api，有的技术文章还必须得看看图片。这怎么办捏？查了老半天资料，找了个勉强的解决办法。解决原理：<strong>让浏览器在访问链接时不要带上referer。</strong>解决办法：<strong>在a标签内使用rel=”noreferrer”来达到这一目的。</strong>缺憾就是仅支持目前大部分的基于Webkit的浏览器。</p>
-<p><span style="color:red">第六个问题,Ajax的使用问题。</span>由于第一版的网站开发要求兼容到IE9，但是jQuery的ajax函数在跨域调用时在ie9浏览器不怎么管用，看了几遍官方文档也试了一些网上的解决方案都不行，最后只能用原生js通过jsonp来实现。<br>目前大部分基于Webkit的浏览器已经支持。</p>
+<p><span style="color:red">第六个问题,Ajax的使用问题。</span>由于第一版的网站开发要求兼容到IE9，但是jQuery的ajax函数在跨域调用时在ie9浏览器不怎么管用，看了几遍官方文档也试了一些网上的解决方案都不行，最后只能用原生js通过jsonp来实现。</p>
 <p><span style="color:red">第七个问题,关于cookie的使用。</span>在构建留言板功能时，考虑了几个因素。一个是内容高度没有超过容器时，隐藏滚动条。第二个添加新的留言时，留言板显示返回首位。第三个便是正则表达式来对留言字数以及内容做一些简单的规范。最后就是通过cookie来限制留言的次数了。</p>
 <p><span style="color:red">第七个问题,条件注释判断浏览器。</span>这个可以说是非常实用的了。简单解释就是只有ie浏览器能识别，其他浏览器会直接把它当成注释。在兼容ie浏览器方面，可以根据浏览器不同来选择css样式加载，以及html内容的改变。由于，我在休闲栏用的api不支持callback，因此跨域访问不兼容ie9，我索性用<code>&lt;!--[if !IE]&gt;
 &lt;![endif]--&gt;</code>对休闲栏进行条件注释。一则考虑这不是重要的功能部分，再者是实在想用用这个神奇的功能。</p>
