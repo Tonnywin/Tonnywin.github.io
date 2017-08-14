@@ -5,7 +5,33 @@
     <entry>
       <title><![CDATA[搭建个人网站第一版的一些总结]]></title>
       <url>/2017/08/11/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E7%AC%AC%E4%B8%80%E7%89%88%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<p>&emsp;&emsp;刚开始构建网站时，就想通过hash值来做一个单页面结构的网站，这也是为以后的第二版采用<code>vue-router</code>来搭建单页面网站做一些铺垫。因此整个网站从主页、关于我、视野、github仓库都是通过监控<code>hash</code>值的改变来做到的。由于现在网站适应移动端，pc端成为潮流，而且响应式网站具有非常友善的浏览体验，于是我也毫不犹豫地采用了<code>bootstrap</code>对整个网站进行响应式开发。至于开发所用的技术方面，我就不用怎么想了，就把我目前掌握最熟练的<code>html+css+jquery+bootstrap</code>来做一个菜鸟级开发了。其实我也想蠢蠢欲试直接拿<code>sass+es6+webpack+bootstrap</code>来进行开发的，但是考虑之前练手的项目中<code>es6</code>用的太少了，而且我觉得作为一名菜鸟必须把基础打好，饭咬一口一口吃，路要一步一步走。把基础打好，后面什么的也就指日可待了。想好了用什么开发以及大概的网站框架后，接下来就是构思网站的一些功能模块了。虽然这次不打算用<code>vue</code>开发，但是由于接触了<code>vue组件</code>开发，于是这个开发尽量往组件化开发的思想上靠，所以这次网站开发的功能模块能用<code>jQuery插件</code>开发就用<code>jQuery插件</code>开发。因此这次除了用了一两个别人的插件（复制功能插件，寄语文字动画功能插件），其他的都是自己独立编写的插件（弹窗，留言板，拖拽、字数检测等）。</p>
+<p>&emsp;&emsp;要说搭建网站学到最多的是什么，我想当然是明白了前后端怎么合作分工来共同搭建网站。之前学习中，对于后端的接触无非是用<code>apache+php</code>搭建服务端环境,然后用别人给的api通过<code>ajax</code>来实现数据的交互。这次由于自己要做后端，因此专门自学了<code>MySQL</code>语言，和一些简单的<code>php</code>语句。因此也算完整地参与了<code>MySQL</code>搭建数据库，<code>PHP</code>对数据进行相应处理的后端开发过程。当然也包括，后来自己在阿里云上传数据库，连接数据库，管理数据库一些后端处理的学习。这整个过程让我更加明白前后端的关系紧密，以及整个网站运作过程中数据的产生，操作和传送处理过程。说白了，<strong>前端做的事也就是把信息更人性化，动态化的呈给用户，并且收集用户的信息完整无误的传送给后端的同志们进行分析处理的过程</strong>。因此要做好后端就要做好数据的高效计算处理以及管理，<strong>要做好前端则更需要做到极致的用户体验</strong>。当然，这也仅仅是我个人肤浅的认知。</p>
+<p>&emsp;&emsp;说了这么多，作为一篇技术类的博客总结一般都是要贴代码并开始码字装逼的。我也不例外。谈完网站的构建思想，以及搭建网站给我最深的感触后，接下来就来谈谈在开发过程中，自己遇到的一些问题，以及怎么解决的吧。说实话，菜鸟遇到的问题，确实五花八门，但这也正是一个程序员必须要走的路啊~~~~</p>
+<p>&emsp;&emsp;<span style="color:red">第一个问题是判断是拖拽还是点击问题</span>。我做的 <code>联系我</code> 这个弹窗的功能模块是如果点击弹出弹窗，如果拖拽则不弹出弹窗。由于拖拽一定是会触发该对象的<code>click</code>事件的。因此既然必须要走<code>click</code>事件，那么只能在<code>click</code>事件里进行判断是否拖拽了。又因为点击和拖拽唯一的区别就在于点击不会触发<code>onmousemove</code>事件，那么解决方案就是设置一个标志位。走<code>onmousemove</code>事件改变标志位。用标志位判断是否执行<code>click</code>里的代码。这一个问题的解决让我对标志位的使用情景的理解有了更一步的认识。它就像开发者设置的开关，当需要根据<code>A情况</code>来判断<code>B情况</code>时，在<code>A情况</code>中设置标志位传达信息来进行对<code>B情况</code>的判断是最好不过了。这一个问题确实是个小问题，但对我来说却印象深刻，所谓博客就是对自己的交代，所以也在此深深的记录总结。</p>
+<p>&emsp;&emsp;<span style="color:red">第二个问题，页面切换动画问题</span>。我做的网页的切换动画时折叠动画。但同时又需要满足自适应问题，也就是说，在不同设备下我的网页内容的高是不一样的，但是折叠动画（我指的是用jQuery开发）需要有一个明确的动画目标值–高。所以查了很多资料，也没有具体的实际解决方案。最后索性按着最基本的原理自己给了一个解决方案。也就是<strong>在CSS中height设置为auto，在js中再改变height的属性，对高进行动画调整，最后在把height属性改回auto。</strong>当然这样做违反了代码实在不简洁，但是考虑到用了jQuery的animate,也只能这么妥协了。若是有哪位大神有好的解决方案，恳请留言指教啊~~~具体代码如下：</p>
+<pre><code> indexContent.stop().animate({&quot;height&quot;: 0}, toggleTime,function () {
+    conDiv.removeClass(&quot;active&quot;);
+    var oheight = $this.css(&quot;height&quot;, &quot;auto&quot;).height();
+    $this.css({&quot;height&quot;: 0}).addClass(&quot;active&quot;).stop().animate({
+       &quot;height&quot;: oheight}, toggleTime,function () {
+        $this.css(&quot;height&quot;, &quot;auto&quot;);
+    });
+});
+</code></pre><p>&emsp;&emsp;<span style="color:red">第三个问题，寄语功能文字动画问题</span>。首先寄语功能动画效果相对于每次进入一次主页再加一次显然只加载一次用户体验较佳。因此这里也就是用标志位判断一下就OK了。然后是加载完后，需要有一个缩小并且背景切换的效果，因此，又需要变化高。因此在切换到非主页的其他页面由于当时寄语板的父级没有高，因此会造成寄语板溢出的状况。怎么解决呢，最后发现只要给寄语板的<code>height</code>设置<code>auto属性</code>就解决了。它会在折叠动画后自适应地扩展父级的高。在这需要总结的有两个地方：<br><br>1.若父级的高为0，用js对子级的高进行改变时，只会造成溢出。<br><br>2.height设置auto属性，能自适应的扩种父级的高。前提是父级没有固定的高。</p>
+<p>&emsp;&emsp;<span style="color:red">第四个问题，移动端与PC端拖拽事件不同的问题</span>。说实话，之前自己练的小项目中根本没有接触过移动端。因此当开发中发现自己开发的拖拽插件在移动端死活动不了时又不得不补一下移动端的一些知识。了解移动端时触发事件是<code>touchstart</code>、<code>touchmove</code>、<code>touchend</code>后确定了思路。先判断是否为移动端，在进行相应的事件加载，毕竟PC端与移动端相应的拖拽事件都加载一遍是不合理的。因此又扯出一个问题？怎么判断是否为移动端？首先移动端和PC端的浏览器信息肯定是不一样的，于是机智的我马上想到了用的很少了<code>navigator</code>，一查资料，果然，通过<code>正则表达式</code>以及<code>navigator.userAgent</code>来实现判断。具体如下：</p>
+<pre><code>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {...}
+</code></pre><p>考虑到像Blackberry黑莓手机已经快要消失匿迹了，你也可以直接删了。当然，我仍然留有一部黑莓手机，所以也就不忍心了。至于<code>touchstart</code>、<code>touchmove</code>、<code>touchend</code>的使用也就大同小异了，在这里总结也只是着重说明PC端与移动端的拖拽事件的不一样。</p>
+<p><span style="color:red">第五个问题,外链的使用问题。</span>按道理来说外链的使用是没有问题的，就是使用<code>a标签</code>一调用就行了，可是现实并不总是这么美好。在调用别人家的图片时由于相当于你偷人家的资源，于是就有了<strong>防盗链</strong>这一说。这让一直认为世界是无私美好的我瞬间涨姿势了！对于一些图标啥的我也是直接挂在图片外链网站，也没有想过用人家的外链。但是在休闲栏我用的是别人的api，有的技术文章还必须得看看图片。这怎么办捏？查了老半天资料，找了个勉强的解决办法。解决原理：<strong>让浏览器在访问链接时不要带上referer。</strong>解决办法：<strong>在a标签内使用rel=”noreferrer”来达到这一目的。</strong>缺憾就是仅支持目前大部分的基于Webkit的浏览器。</p>
+<p><span style="color:red">第六个问题,Ajax的使用问题。</span>由于第一版的网站开发要求兼容到IE9，但是jQuery的ajax函数在跨域调用时在ie9浏览器不怎么管用，看了几遍官方文档也试了一些网上的解决方案都不行，最后只能用原生js通过jsonp来实现。<br>目前大部分基于Webkit的浏览器已经支持。</p>
+<p><span style="color:red">第七个问题,关于cookie的使用。</span>在构建留言板功能时，考虑了几个因素。一个是内容高度没有超过容器时，隐藏滚动条。第二个添加新的留言时，留言板显示返回首位。第三个便是正则表达式来对留言字数以及内容做一些简单的规范。最后就是通过cookie来限制留言的次数了。</p>
+<p><span style="color:red">第七个问题,条件注释判断浏览器。</span>这个可以说是非常实用的了。简单解释就是只有ie浏览器能识别，其他浏览器会直接把它当成注释。在兼容ie浏览器方面，可以根据浏览器不同来选择css样式加载，以及html内容的改变。由于，我在休闲栏用的api不支持callback，因此跨域访问不兼容ie9，我索性用<code>&lt;!--[if !IE]&gt;
+&lt;![endif]--&gt;</code>对休闲栏进行条件注释。一则考虑这不是重要的功能部分，再者是实在想用用这个神奇的功能。</p>
+<p><span style="color:red">第八个问题,特殊字体应用的问题。</span>在CSS3中可以通过@font-face来考虑使用特殊字体，这对英文字体是很方便的。但是由于中文字体库很大，浏览加载起来对用户来说不是很友好。所以最好的就是使用在线字体库。我在寄语板中的钢笔字体用的就是有字库的在线字体库。</p>
+<p><span style="color:red">第九个问题,移动端的纯js剪切板问题。</span>这个问题一直没有有效的解决。当然我知道有种方案是借助flash来解决。但还是希望通过纯js来解决。在这里留个记号，等以后厉害了，说不定就可以去解决了。</p>
+<p>写到这里，其实也就差不多了。至于一些细节的技术分享也没贴出来。说实话也没贴多少代码。关键我觉得做网站，那些技术bug等等的都是常规的。在这里我记录的都是自己以前做小项目没有的感受和总结。</p>
+<p>最后，我想说的是我决定在今年对网站进行第二版更新的原因。经过这段时间对这个网站的开发更让我对自己掌握的基础技术有了信心，也让我有了强烈的欲望在此基础上在走出一步。说实话，学了那么多课程，真正的把技术用于实践才能把书本上的变成自己的，这也让我更明确要想在程序猿这条路上进步，必须多做，多总结。</p>
+]]></content>
       
         <categories>
             
@@ -61,6 +87,12 @@
     
   
   
+    
+    <entry>
+      <title><![CDATA[tags]]></title>
+      <url>/tags/index.html</url>
+      <content type="html"></content>
+    </entry>
     
   
 </search>
