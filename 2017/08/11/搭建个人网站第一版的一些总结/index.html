@@ -76,7 +76,7 @@
 
     
         <meta property="article:published_time" content="8月 11, 2017" />
-        <meta property="article:modified_time" content="8月 15, 2017" />
+        <meta property="article:modified_time" content="8月 17, 2017" />
     
 
     <!-- The Twitter Card protocol -->
@@ -117,7 +117,7 @@
     "headline": "搭建个人网站第一版的一些总结",
     "url": "http://blog.toonywin.club/2017/08/11/搭建个人网站第一版的一些总结/index.html",
     "datePublished": "8月 11, 2017",
-    "dateModified": "8月 15, 2017",
+    "dateModified": "8月 17, 2017",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -505,6 +505,7 @@
 &lt;![endif]--&gt;</code>对休闲栏进行条件注释。一则考虑这不是重要的功能部分，再者是实在想用用这个神奇的功能。</p>
 <p><span style="color:red">第八个问题,特殊字体应用的问题。</span>在CSS3中可以通过@font-face来考虑使用特殊字体，这对英文字体是很方便的。但是由于中文字体库很大，浏览加载起来对用户来说不是很友好。所以最好的就是使用在线字体库。我在寄语板中的钢笔字体用的就是有字库的在线字体库。</p>
 <p><span style="color:red">第九个问题,移动端的纯js剪切板问题。</span>这个问题一直没有有效的解决。当然我知道有种方案是借助flash来解决。但还是希望通过纯js来解决。在这里留个记号，等以后厉害了，说不定就可以去解决了。</p>
+<p><span style="color:red">第十个问题,favicon.ico。</span>没有做这个网站是没有留意这个东西的。本来不想写进去，但想了下还是补了进来。浏览器标题栏有个小图标真的一下子让网站变得有趣起来了。如果又看到这篇文章同时也是菜鸟想做网站的朋友，真的想分享给你。favicon.ico我是用在线网站给转换的，弄好了放在根目录就行了。然后在index.html中插入<code>&lt;link rel=&quot;shortcut icon&quot; href=&quot;/favicon.ico&quot;&gt;</code>就OK了，很简单，但是超实用~</p>
 <p><span style="color:red">最重要的问题。用户体验问题</span>，一个网站光实现了功能还不行。你必须各个方面为用户着想。做这个网站，关于用户体验有几点心得。第一，不要追求复杂的动画效果，动态效果只是服务与用户。所以能让用户更加容易理解网站内容的，方便交互的动态效果才是最好的动态效果。第二，写出来的代码包含文件能压缩到20k就不要搞到30k。代码简洁，图片等素材文件大小适当能加速浏览器加载。当然，也可能根据网站内容来进行相应的加载方式（按需加载等）。第三，网站要有合理的提示内容，这种提示内容一般psd文件不会有，开发人员可根据自己的经验，给予一些温馨的提示。</p>
 <p>写到这里，其实也就差不多了。至于一些细节的技术分享也没贴出来。说实话也没贴多少代码。关键我觉得做网站，那些技术bug等等的都是常规的。在这里我记录的都是自己以前做小项目没有的感受和总结。</p>
 <p>最后，我想说的是我决定在今年对网站进行第二版更新。经过这段时间对这个网站的开发更让我对自己掌握的基础技术有了信心，也让我有了强烈的欲望在此基础上在走出一步。说实话，学了那么多课程，真正的把技术用于实践才能把书本上的变成自己的，这也让我更明确要想在程序猿这条路上进步，必须多做，多总结。</p>
@@ -546,6 +547,14 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2017/08/17/first-version-change-1/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
     
 
     <!-- Section Spacer -->
@@ -635,7 +644,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2017/08/">八月 2017<span class="sidebar_archives-count">3</span></a>
             </ul>
         </li>
         
@@ -653,7 +662,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/生活/">生活<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/生活/">生活<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
